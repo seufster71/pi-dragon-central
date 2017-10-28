@@ -1,5 +1,5 @@
 {
-  "name": "pi-lights",
+  "name": "pi-dragon-central",
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
@@ -10,8 +10,12 @@
     "buildprod": "webpack -p",
     "start": "webpack-dev-server --open"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Edward Seufert",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seufster71/pi-dragon-central.git"
+  },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "react": "^15.6.1",
