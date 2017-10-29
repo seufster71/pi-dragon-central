@@ -207,13 +207,21 @@ public class PiController {
 	}
 	
 	public void status(RestRequest request, RestResponse response) {
-		List<String> switchIds = (ArrayList<String>) request.getParams().get("switchIds");
 		Map<String,Integer> pinStatus = new HashMap<String,Integer>();
 		
 		try {
-			for (String switchId : switchIds){
-				if (gpioMap.containsKey(switchId)) {
-					pinStatus.put(switchId, gpioMap.get(switchId).getState().getValue());
+			if (request.containsParam("switchIds") ) {
+				List<String> switchIds = (ArrayList<String>) request.getParams().get("switchIds");
+				if ( switchIds.size() > 0) {
+					for (String switchId : switchIds){
+						if (gpioMap.containsKey(switchId)) {
+							pinStatus.put(switchId, gpioMap.get(switchId).getState().getValue());
+						}
+					}
+				}
+			} else {
+				for (String key : gpioMap.keySet()) {
+					pinStatus.put(key, gpioMap.get(key).getState().getValue());
 				}
 			}
 		} catch (Exception e) {

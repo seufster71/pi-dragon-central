@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import NavigationContainer from './core/navigation/NavigationContainer.js';
-import PiLightsContainer from './piSwitch/piLights/PiLightsContainer.js';
+import PiLightsContainer from './switchCentral/SwitchCentralContainer.js';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import Theme from './theme.css';
 
@@ -16,8 +15,7 @@ class App extends React.Component {
   render() {
     return (
 		<div>
-			<NavigationContainer headerName={this.state.headerName}/>
-			<PiLightsContainer/>
+			<SwitchCentralContainer/>
 		</div>
     );
   }
