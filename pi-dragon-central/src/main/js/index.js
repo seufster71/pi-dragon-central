@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import PiLightsContainer from './switchCentral/SwitchCentralContainer.js';
+import SwitchCentralContainer from './switchCentral/SwitchCentralContainer.js';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import Theme from './theme.css';
 
