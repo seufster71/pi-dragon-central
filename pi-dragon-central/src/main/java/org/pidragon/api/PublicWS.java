@@ -29,6 +29,12 @@ public class PublicWS {
 		case "toggle":
 			piController.toggle(request, response);
 			break;
+		case "switchOff":
+			piController.switchOff(request, response);
+			break;
+		case "switchOn":
+			piController.switchOn(request, response);
+			break;
 		case "status":
 			piController.status(request, response);
 			break;
