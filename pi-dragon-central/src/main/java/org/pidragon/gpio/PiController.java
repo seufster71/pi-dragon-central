@@ -36,22 +36,22 @@ public class PiController {
 	final GpioPinDigitalOutput gpio13 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_13,"SW13", PinState.HIGH);
 	final GpioPinDigitalOutput gpio14 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_14,"SW14", PinState.HIGH);
 	final GpioPinDigitalOutput gpio15 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_15,"SW15", PinState.HIGH);
-	/*final GpioPinDigitalOutput gpio16 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_16,"SW16", PinState.HIGH);
-	final GpioPinDigitalOutput gpio17 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_17,"SW17", PinState.HIGH);
+	final GpioPinDigitalOutput gpio16 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_16,"SW16", PinState.LOW);
+	final GpioPinDigitalOutput gpio17 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_17,"SW17", PinState.LOW);
 	final GpioPinDigitalOutput gpio18 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_18,"SW18", PinState.HIGH);
 	final GpioPinDigitalOutput gpio19 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_19,"SW19", PinState.HIGH);
 	final GpioPinDigitalOutput gpio20 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_20,"SW20", PinState.HIGH);
 	final GpioPinDigitalOutput gpio21 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_21,"SW21", PinState.HIGH);
 	final GpioPinDigitalOutput gpio22 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_22,"SW22", PinState.HIGH);
 	final GpioPinDigitalOutput gpio23 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_23,"SW23", PinState.HIGH);
-	final GpioPinDigitalOutput gpio24 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_24,"SW24", PinState.HIGH);
-	final GpioPinDigitalOutput gpio25 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_25,"SW25", PinState.HIGH);
+	final GpioPinDigitalOutput gpio24 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_24,"SW24", PinState.LOW);
+	final GpioPinDigitalOutput gpio25 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_25,"SW25", PinState.LOW);
 	final GpioPinDigitalOutput gpio26 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_26,"SW26", PinState.HIGH);
 	final GpioPinDigitalOutput gpio27 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_27,"SW27", PinState.HIGH);
 	final GpioPinDigitalOutput gpio28 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_28,"SW28", PinState.HIGH);
 	final GpioPinDigitalOutput gpio29 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_29,"SW29", PinState.HIGH);
 	final GpioPinDigitalOutput gpio30 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_30,"SW30", PinState.HIGH);
-	final GpioPinDigitalOutput gpio31 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_31,"SW31", PinState.HIGH);*/
+	final GpioPinDigitalOutput gpio31 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_31,"SW31", PinState.HIGH);
 	
 	public PiController() {
 		gpioMap.put("1-eth", gpio0);
@@ -70,7 +70,7 @@ public class PiController {
 		gpioMap.put("2-4", gpio13);
 		gpioMap.put("2-5", gpio14);
 		gpioMap.put("2-6", gpio15);
-		/*gpioMap.put("open-1", gpio16);
+		gpioMap.put("open-1", gpio16);
 		gpioMap.put("open-2", gpio17);
 		gpioMap.put("3-1", gpio18);
 		gpioMap.put("3-2", gpio19);
@@ -85,7 +85,7 @@ public class PiController {
 		gpioMap.put("4-3", gpio28);
 		gpioMap.put("4-4", gpio29);
 		gpioMap.put("4-5", gpio30);
-		gpioMap.put("4-6", gpio31);*/
+		gpioMap.put("4-6", gpio31);
 	}
 	
 	public void test(RestRequest request, RestResponse response) {
