@@ -23,19 +23,19 @@ public class PublicWS {
 		RestResponse response = new RestResponse();
 		
 		switch (action) {
-		case "test":
+		case "TEST":
 			piController.test(request, response);
 			break;
-		case "toggle":
+		case "TOGGLE":
 			piController.toggle(request, response);
 			break;
-		case "switchOff":
+		case "OFF":
 			piController.switchOff(request, response);
 			break;
-		case "switchOn":
+		case "ON":
 			piController.switchOn(request, response);
 			break;
-		case "status":
+		case "STATUS":
 			piController.status(request, response);
 			break;
 		default:

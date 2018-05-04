@@ -6,14 +6,14 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const BUILD_DIR = path.resolve(__dirname, 'src/main/resources/static/dist');
+const BUILD_DIR = path.resolve(__dirname, 'src/main/resources/static/build');
 
 module.exports = merge(common, {
   devtool: 'source-map',
   plugins: [
     new UglifyJSPlugin({ sourceMap: true }),
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('production') }),
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
       title: 'Production'
     })
@@ -21,6 +21,6 @@ module.exports = merge(common, {
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
-    publicPath: 'dist/'
+    publicPath: 'build/'
   }
 });
