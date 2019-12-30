@@ -1,21 +1,27 @@
+const webpack = require('webpack');
 const path = require('path');
 
 const APP_DIR = path.resolve(__dirname, 'src/main/js');
 
 module.exports = {
-  entry: { app: APP_DIR + '/App.js' },
+  entry: { app: APP_DIR + '/index.js' },
+  plugins: [
+	    new webpack.LoaderOptionsPlugin({
+	      options: {}
+	    })
+	  ],
   module : {
-    loaders : [
-      {
-        test : /\.jsx?/,
-        include: APP_DIR,
-        loader: 'eslint-loader'
-      },
+    rules : [
+ //     {
+  //      test : /\.jsx?/,
+  //      include: APP_DIR,
+  //      loader: 'eslint-loader'
+  //    },
       {
         test : /\.jsx?/,
         include : APP_DIR,
-        loader : 'babel-loader',
-        query: { presets: ['es2015', 'react'] }
+        exclude : /node_modules/,
+        use: { loader : 'babel-loader' }
       },
       {
         test: /\.css$/,
